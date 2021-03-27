@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../model/users');
 
-router.post('/', async ({ req, res }) => {
+router.post('/', async (req, res) => {
     if (req.body.username && req.body.password) {
         let user = await User.findOne({ username: req.body.username });
         if (user) {

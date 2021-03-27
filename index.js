@@ -16,7 +16,7 @@ const getNotes = require('./routes/getNotes');
 const reg = require('./routes/reg');
 
 // MidleWares
-app.use(express.json());
+app.use(express.json())
 app.use(cors());
 app.use('/api/auth', auth);
 app.use('/api/reg', reg);
